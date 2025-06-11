@@ -11,7 +11,7 @@ import numpy as np
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Load YOLO model once
-model = YOLO(r"model.pt")
+model = YOLO(r"model.onnx")
 model.fuse()  # Optimize model for inference
 
 st.title("🎯 Real-Time Arabic Language Sign Detection with YOLOv11n!")
